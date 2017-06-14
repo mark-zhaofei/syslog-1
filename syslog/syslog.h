@@ -23,19 +23,19 @@
 #endif // !SYS_LOG_DETAIL
 
 #if LOG_LEVEL >= LOG_LEVEL_ERROR
-#define LOGE(format,...)   PRINT(format,...)
+#define LOGE(format,...)   PRINT(format,__VA_ARGS__)
 #else
 #define LOGE(format,...)
 #endif
 
 #if LOG_LEVEL >= LOG_LEVEL_INFO
-#define LOGI(format,...)   PRINT(format,...)
+#define LOGI(format,...)   PRINT(format,__VA_ARGS__)
 #else
 #define LOGI(format,...)
 #endif
 
 #if LOG_LEVEL >= LOG_LEVEL_DEBUG
-#define LOGD(format,...)   PRINT(format,...)
+#define LOGD(format,...)   PRINT(format,__VA_ARGS__)
 #else
 #define LOGD(format,...)
 #endif
